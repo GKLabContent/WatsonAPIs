@@ -20,8 +20,8 @@ public class NLUChangedController {
 	
 	//Creating NLU instance and Authenticating with NLU by passing the version,username and password for the service
 	static NaturalLanguageUnderstanding service = new NaturalLanguageUnderstanding(
-			NaturalLanguageUnderstanding.VERSION_DATE_2017_02_27, "535aac46-845e-48f8-8f41-c18d98d5a45a",
-			"4Dj51yUnannx");
+			NaturalLanguageUnderstanding.VERSION_DATE_2017_02_27, "Username",
+			"Password");
 	
 	@ResponseBody
 	@RequestMapping(value="/nluchanged", method=RequestMethod.POST)

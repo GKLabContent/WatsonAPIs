@@ -31,13 +31,13 @@ public class VisualRecognitionController {
 				VisualRecognition.VERSION_DATE_2016_05_20);
 
 		// Authenticating to the service by providing the Service API key
-		service.setApiKey("2ac637463dded8451707ee8866db0c501deca5b9");
+		service.setApiKey("apikey");
 
 		System.out.println("Classify an image");
 
 		// Classifying the images in your classifier
 		ClassifyImagesOptions options = new ClassifyImagesOptions.Builder()
-				.classifierIds("WunhillCustomClassifier_789679534")
+				.classifierIds("classifierIds")
 				.images(convFile).build();
 
 		// Executing the classify option

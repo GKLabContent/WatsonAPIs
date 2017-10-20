@@ -28,7 +28,7 @@ public class TextToSpeechController {
 		TextToSpeech tts = new TextToSpeech();
 
 		//Authenticating with username and password
-		tts.setUsernameAndPassword("ae70e6bb-9d00-4edc-83c5-efe102c32299", "phlNxkdyEMcW");
+		tts.setUsernameAndPassword("Username", "Password");
 		InputStream ins;
 		OutputStream out = null;
 		

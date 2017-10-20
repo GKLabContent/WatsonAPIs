@@ -33,7 +33,7 @@ public class ToneAnalyzerController {
 		ToneAnalyzer service2 = new ToneAnalyzer(ToneAnalyzer.VERSION_DATE_2016_05_19);
 		
 		//Authenticating with the service
-		service2.setUsernameAndPassword("49514d92-4b74-41fc-bbaf-84c967f1f8d1", "xZTrNgy7tOWa");
+		service2.setUsernameAndPassword("Username", "Password");
 
 		//Getting the tone
 		ToneAnalysis tone = service2.getTone(textTone, null).execute();

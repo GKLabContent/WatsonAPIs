@@ -22,10 +22,10 @@ public class DiscoveryController {
 	public  String showResponse(HttpServletRequest reques, HttpServletResponse response,
 			@RequestParam("enterVal") String userQuery, Model mod) {
 		
-		String userName = "41dd18b1-1786-4e3e-88b6-c0b0645b2b4f";
-		String password = "glKtj8fMp5Ve";
-		String collectionId = "caf86e4d-751b-44ab-91ef-b05c5b099640";
-		String environmentId = "55658042-7b9c-4558-9b79-611435ad1cdf";
+		String userName = " ";
+		String password = " ";
+		String collectionId = " ";
+		String environmentId = " ";
 		
 		//Creating the instance of Watson Discovery API by passing the Version of Discovery Service
 		Discovery discovery = new Discovery("2016-12-01");

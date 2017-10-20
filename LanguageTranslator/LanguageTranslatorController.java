@@ -20,7 +20,7 @@ public class LanguageTranslatorController {
 		LanguageTranslator service = new LanguageTranslator();
 		
 		//Authenticating with username and password
-		service.setUsernameAndPassword("73899959-a45f-4e31-8512-d054e2388d0a","ttqsdExPFvQW");
+		service.setUsernameAndPassword("Username","Password");
 
 		//Making request for translation by passing the text and the target language
 		com.ibm.watson.developer_cloud.language_translator.v2.model.TranslationResult result1 =  service.translate(text, to).execute();

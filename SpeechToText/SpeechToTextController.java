@@ -27,7 +27,7 @@ public class SpeechToTextController {
 		SpeechToText service = new SpeechToText();
 		
 		//Authenticating with service
-		service.setUsernameAndPassword("3219e64f-6da3-4364-8721-e02946e2efa7", "DvPMcqwP7G4C");
+		service.setUsernameAndPassword("Username", "Password");
 
 		//Configuring the RecognizeOptions by setting contentType
 		RecognizeOptions options = new RecognizeOptions.Builder()

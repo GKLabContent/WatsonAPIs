@@ -40,12 +40,12 @@ public class ConversationController {
 		ConversationService service = new ConversationService("2017-06-09");
 		
 		//Authenticating with the Watson Conversation API by providing the Username and Password
-		service.setUsernameAndPassword("80a79cfa-b27d-4e56-8dc7-0221db74308c", "tUy7FRpwBQlX");
+		service.setUsernameAndPassword("Username", "Password");
 		
 		//Creating message query
 		MessageRequest newMessage = new MessageRequest.Builder()
 		.inputText(input).context(context).build();
-		String workspaceId = "882de57b-b701-4ce7-b00b-fd5429e607f2";
+		String workspaceId = "workspaceId";
 		
 		//Calling the message() method with the workspaceId and query 
 		MessageResponse response = service.message(workspaceId, newMessage).execute();
