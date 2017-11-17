@@ -92,11 +92,11 @@ public class ConversationDiscoveryController {
 		ConversationService service = new ConversationService("2017-06-09");
 		
 		//Authenticating with the Watson Conversation API by providing the Username and Password
-		service.setUsernameAndPassword("54b5fe39-5b73-4db9-8485-06bf5b8c95da", "DcnfASTHCrE1");
+		service.setUsernameAndPassword("username", "password");
 		
 		//Creating message query
 		MessageRequest newMessage = new MessageRequest.Builder().inputText(input).context(context).build();
-		String workspaceId = "29c7fd33-e11c-4b69-95a6-a21a86087280";
+		String workspaceId = "workspaceId";
 		
 		//Calling the message() method with the workspaceId and query
 		MessageResponse response = service.message(workspaceId, newMessage).execute();
@@ -106,10 +106,10 @@ public class ConversationDiscoveryController {
 
 	public static String Discoveryapicall(String userQuery) throws JSONException {
 
-		String userName = "c2b0e08b-ecc8-4e13-80db-72875c668634";
-		String password = "1Fx5P6mL8PWC";
-		String collectionId = "4c5b6c01-4d87-4f95-a282-5c469b69181f";
-		String environmentId = "a8524911-8110-49df-bce4-59423d0d6aa1";
+		String userName = "userName";
+		String password = "password";
+		String collectionId = "collectionId";
+		String environmentId = "environmentId";
 		
 		//Creating the instance of Watson Discovery API by passing the Version of Discovery Service
 		Discovery discovery = new Discovery("2016-12-01");
