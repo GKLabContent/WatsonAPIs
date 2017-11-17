@@ -70,7 +70,7 @@ public class ConversationDiscoveryController {
 			wordslist.add("Transfer");
 			boolean sst = false;
 			for (String string : wordslist) {
-				if (input.contains(string)) {
+				if (input.contains(string) || input.contains(string.toLowerCase())) {
 					sst = true;
 				}
 			}
@@ -92,11 +92,11 @@ public class ConversationDiscoveryController {
 		ConversationService service = new ConversationService("2017-06-09");
 		
 		//Authenticating with the Watson Conversation API by providing the Username and Password
-		service.setUsernameAndPassword("username", "password");
+		service.setUsernameAndPassword("54b5fe39-5b73-4db9-8485-06bf5b8c95da", "DcnfASTHCrE1");
 		
 		//Creating message query
 		MessageRequest newMessage = new MessageRequest.Builder().inputText(input).context(context).build();
-		String workspaceId = "workspaceId";
+		String workspaceId = "29c7fd33-e11c-4b69-95a6-a21a86087280";
 		
 		//Calling the message() method with the workspaceId and query
 		MessageResponse response = service.message(workspaceId, newMessage).execute();
@@ -106,10 +106,10 @@ public class ConversationDiscoveryController {
 
 	public static String Discoveryapicall(String userQuery) throws JSONException {
 
-		String userName = "username";
-		String password = "password";
-		String collectionId = "collectionId";
-		String environmentId = "environmentId";
+		String userName = "c2b0e08b-ecc8-4e13-80db-72875c668634";
+		String password = "1Fx5P6mL8PWC";
+		String collectionId = "4c5b6c01-4d87-4f95-a282-5c469b69181f";
+		String environmentId = "a8524911-8110-49df-bce4-59423d0d6aa1";
 		
 		//Creating the instance of Watson Discovery API by passing the Version of Discovery Service
 		Discovery discovery = new Discovery("2016-12-01");
@@ -127,6 +127,8 @@ public class ConversationDiscoveryController {
 		//Executing the query and assigning the response in the queryResponse
 		QueryResponse queryResponse = discovery.query(queryBuilder.build()).execute();
 		
+		System.out.println(queryResponse.getResults());
+		
 		int size = 1;
 		if (queryResponse.getResults().size() > 0) {
 			size = queryResponse.getResults().size();
@@ -135,7 +137,7 @@ public class ConversationDiscoveryController {
 
 		if (queryResponse.getResults().size() > 0) {
 			for (int j = 0; j < size; j++)
-				fresp[j] = "" + queryResponse.getResults().get(j).get("value");
+				fresp[j] = "" + queryResponse.getResults().get(j).get("text");
 		} else {
 			fresp[0] = "I didn't understand. You can try rephrasing.";
 		}
