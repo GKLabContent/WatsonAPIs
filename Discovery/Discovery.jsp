@@ -15,8 +15,7 @@
 	<div class="text-right">
 
 		<!-- Creating label before the text box -->
-		<label class="col-sm-3  srch-label">Search for Logistics
-			Movement of material</label>
+		<label class="col-sm-3  srch-label">Search for hazardous material guidelines</label>
 		<div class="col-sm-5">
 			<form action="<c:url value="/SearchLogistics"/>">
 				<div class="input-group">
