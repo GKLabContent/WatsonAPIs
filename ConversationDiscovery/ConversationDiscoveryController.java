@@ -70,7 +70,7 @@ public class ConversationDiscoveryController {
 			wordslist.add("Transfer");
 			boolean sst = false;
 			for (String string : wordslist) {
-				if (input.contains(string) || input.contains(string.toLowerCase())) {
+				if (input != null && input.toLowerCase().contains(string.toLowerCase())) {
 					sst = true;
 				}
 			}
